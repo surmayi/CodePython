@@ -1,19 +1,12 @@
-def countPrimes(self, n):
-        if(n in [0,1,2]):
+class Solution(object):
+    def countPrimes(self, n):
+        if n in [0,1]:
             return 0
-        counter=0
-        if(n==3):
-            return 1
-        stay=True
-        for j in range(2,n):
-            for i in range(2,j):
-                if((i**(j-1))%j !=1):
-                    stay=False
-                    break
-                else:
-                    stay=True
-            if(stay):
-                counter+=1
-        return counter
-
-countPrimes(10)
+        indices= [1] *n
+        indices[0]=0
+        indices[1]=0
+        for i in range(2, int(n**0.5)+1):
+            if indices!=0:
+                indices[i*i:n:i] = [0] * ((n-1-i*i)//i+1)
+        return sum(indices)
+        

@@ -52,8 +52,10 @@ class LinkedList:
 			print("List is empty")
 			return
 		else:
+			val = self.head.getData()
 			self.head=self.head.getNext()
 			self.decLength()
+			return val
 
 	def printList(self):
 		if self.head is None:
