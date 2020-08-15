@@ -2,7 +2,7 @@ class Solution(object):
     def setZeroes(self, matrix):
         m, n = len(matrix), len(matrix[0])
         zero=[]
-        i=j=0
+        i=0
         while i<m:
             j=0
             while j<n:
