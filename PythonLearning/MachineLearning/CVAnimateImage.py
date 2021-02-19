@@ -11,7 +11,7 @@ import os
 # Below code open a window to select and take image input
 top = tk.Tk()
 top.geometry('400x400')
-top.title('Cartoonify Your Image !')
+top.title('Animate Your Image !')
 top.configure(background='white')
 label = Label(top, background='#CDCDCD', font=('calibri', 20, 'bold'))
 
