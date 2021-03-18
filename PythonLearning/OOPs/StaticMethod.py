@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 class BodyInfo:
 # Static methods do not know anything about the state of the class, i.e., they cannot modify class attributes.
 # Static methods can be accessed using the class name or the object name.

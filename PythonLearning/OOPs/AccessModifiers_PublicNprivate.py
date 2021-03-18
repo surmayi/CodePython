@@ -11,6 +11,30 @@ class Employee:
     def __displayID(self):  # displayID is a private method
         print("ID:", self.ID)
 
+class Student:
+
+    def __init__(self,name,result,id):
+        self.name = name
+        self.__result=result
+        self._id=id
+
+    def __printName(self,):
+        print(self.name)
+
+    def printResult(self):
+        print(self.__result)
+
+    def _printId(self):
+        print(self._id)
+
+student = Student('Surmayi',95,1001)
+
+print(student.name)
+student.printResult()
+
+print(student._Student__printName())
+print(student._printId())
+
 Steve = Employee(3789, 2500)
 print("ID:", Steve.ID)
 print("Salary:", Steve.__salary)  # this will cause an error since we are trying to access private data type

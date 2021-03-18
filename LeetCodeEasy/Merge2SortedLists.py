@@ -26,6 +26,18 @@ class Solution(object):
             l3 = l3.next
         return l4
 
+    def mergeTwoLists2(self, l1, l2):
+        if not l1:
+            return l2
+        elif not l2:
+            return l1
+        elif l1.val<l2.val:
+            l1.next= self.mergeTwoLists(l1.next,l2)
+            return l1
+        else:
+            l2.next = self.mergeTwoLists(l1,l2.next)
+            return l2
+
 head1=None
 for x in [301,100,20,20,1,1]:
     head1 = ListNode(x,next =head1)
